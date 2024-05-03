@@ -1,3 +1,4 @@
+import Arts from "./components/Arts/Arts";
 import Footer from "./components/Footer/Footer";
 import ContactUs from "./components/ContactUs/ContactUs";
 import styles from "./page.module.css";
@@ -10,8 +11,8 @@ function App() {
       {/* <NoSSRHero />
       <NoSSRAbout />
       <NoSSRMindMap />
-      <NoSSRFAQ />
-      <NoSSRArts />*/}
+      <NoSSRFAQ />*/}
+      <Arts />
       <ContactUs />
       <Footer />
     </main>
