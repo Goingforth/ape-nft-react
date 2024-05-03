@@ -1,0 +1,160 @@
+.container {
+  padding-left: 77px;
+  padding-right: 77px;
+  margin-bottom: 60px;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+.title {
+  padding-bottom: 24px;
+}
+.iconX {
+  position: relative;
+  width: 36px;
+  height: 36px;
+
+  text-align: center;
+  margin: 0 auto 16px;
+}
+.textJoin {
+  padding-bottom: 16px;
+  font-family: Messina Sans Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.buttonSubmit {
+  padding-top: 10px;
+  padding-bottom: 12px;
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 8px;
+
+  color: var(--color-white);
+
+  font-family: Right Grotesk;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 19px;
+  text-align: center;
+}
+.buttonSubmit:hover {
+  color: var(--color-black);
+}
+.formItem {
+  display: flex;
+}
+.wrapperIcon {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  border-radius: 8px 0px 0px 8px;
+  background-color: var(--color-black);
+}
+.formInput {
+  padding-left: 24px;
+  background-color: transparent;
+  border-radius: 0px 8px 8px 0px;
+
+  border: 1px solid var(--color-black);
+
+  font-family: Messina Sans Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.24);
+}
+.errorsMessage {
+  height: 12px;
+  margin-bottom: 4px;
+  color: var(--color-red);
+  font-family: Messina Sans Mono;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: right;
+}
+.borderIsValid {
+  border-color: var(--color-white);
+}
+.borderError {
+  border-color: var(--color-red);
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0 0 80px 0;
+  }
+  .title {
+    padding: 0 197px 40px 198px;
+  }
+  .iconX {
+    margin-bottom: 24px;
+  }
+  .textJoin {
+    padding: 0 185px 24px 186px;
+
+    font-size: 16px;
+
+    line-height: 19px;
+  }
+  .form {
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    padding-bottom: 0 0 120px 0;
+  }
+  .title {
+    padding-bottom: 80px;
+  }
+  .iconX {
+    margin-bottom: 40px;
+  }
+  .textJoin {
+    padding: 0 430px 40px 430px;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .form {
+    padding-left: 521px;
+    padding-right: 521px;
+  }
+  .wrapperIcon {
+    width: 64px;
+    height: 64px;
+    padding: 20px;
+  }
+  .formInput {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .buttonSubmit {
+    padding-top: 16px;
+    padding-bottom: 20px;
+    border-radius: 12px;
+
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .errorsMessage {
+    height: 16px;
+    margin-bottom: 8px;
+    color: var(--color-red);
+    font-family: Messina Sans Mono;
+    font-size: 12px;
+
+    line-height: 14px;
+  }
+}
