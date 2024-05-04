@@ -1,4 +1,5 @@
 import Arts from "./components/Arts/Arts";
+import MindMap from "./components/MIndMap/MindMap";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
 import ContactUs from "./components/ContactUs/ContactUs";
@@ -10,8 +11,8 @@ function App() {
     <main className={styles.container}>
       <div>START</div>
       {/* <NoSSRHero />
-      <NoSSRAbout />
-      <NoSSRMindMap />*/}
+      <NoSSRAbout />*/}
+      <MindMap />
       <FAQ />
       <Arts />
       <ContactUs />

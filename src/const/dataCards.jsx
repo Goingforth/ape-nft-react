@@ -1,4 +1,3 @@
-import Image from "next/image";
 import UpLeftArrow from "../image/icon/up-left-arrow.png";
 
 const dataCards = [
@@ -29,11 +28,11 @@ const dataCards = [
       </>
     ),
     info: (
-      <Image
+      <img
         src={UpLeftArrow}
-        fill
+        width='100%'
+        height='100%'
         alt='Picture of the up-left-arrow'
-        sizes='(min-width: 24px)'
       />
     ),
   },
