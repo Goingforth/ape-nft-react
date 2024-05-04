@@ -1,4 +1,4 @@
-import data from "@/public/faq/data";
+import data from "/public/faq/data";
 
 const dataFAQ = [
   {

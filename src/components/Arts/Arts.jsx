@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./styles.module.css";
 import style from "../../page.module.css";
 import { useState } from "react";
-import dataArts from "../../../public/slider/data";
+import dataArts from "/public/slider/data";
 import { nanoid } from "nanoid";
 import ItemArts from "./ItemArts";
 import { useResize } from "../Hooks/use-resize";

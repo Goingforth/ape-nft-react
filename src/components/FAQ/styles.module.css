@@ -1,0 +1,150 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px 52px 80px;
+
+  color: var(--color-white);
+}
+.title {
+  padding-bottom: 16px;
+}
+.mapFAQ {
+  display: flex;
+  flex-direction: column;
+}
+.itemFAQ {
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 12px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 148px;
+  height: 183px;
+  transform: rotate(-16deg);
+  left: 19px;
+  top: -30px;
+}
+.blockNumber {
+  margin-right: 6px;
+  font-family: Biro Script Plus;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: var(--color-red);
+}
+.blockInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 169px;
+}
+.blockInfoQuestion {
+  font-family: Right Grotesk;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 20px;
+  text-align: left;
+}
+
+.blockInfoAnswer {
+  font-family: Messina Sans Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+}
+
+.itemFAQ:hover {
+  cursor: pointer;
+}
+
+.itemFAQ:hover .blockInfoQuestion {
+  color: var(--color-red);
+}
+.itemFAQ:hover .blockNumber {
+  color: var(--color-white);
+}
+
+.blockFAQInfo {
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .container {
+    padding: 0 88px 80px 88px;
+  }
+  .title {
+    padding-bottom: 30px;
+  }
+
+  .itemFAQ {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    max-height: 159px;
+    border-radius: 16px;
+  }
+
+  .blockNumber {
+    font-size: 16px;
+    line-height: 27px;
+    margin-left: 27px;
+  }
+
+  .blockInfo {
+    gap: 12px;
+    max-width: 339px;
+  }
+  .blockInfoQuestion {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    padding: 0 204px 96px 204px;
+  }
+  .title {
+    padding-bottom: 56px;
+  }
+  .itemFAQ {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    max-height: 250px;
+    border-radius: 24px;
+  }
+  .blockNumber {
+    margin-right: 12px;
+    margin-left: 15px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .blockInfo {
+    gap: 36px;
+    max-width: 635px;
+  }
+  .blockInfoQuestion {
+    font-size: 64px;
+    line-height: 64px;
+  }
+  .blockInfoAnswer {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .imageWrapper {
+    position: relative;
+    width: 248px;
+    height: 283px;
+
+    transform: rotate(-8deg);
+    left: 15px;
+    top: -32px;
+  }
+}

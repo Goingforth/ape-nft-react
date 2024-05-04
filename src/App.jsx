@@ -1,4 +1,5 @@
 import Arts from "./components/Arts/Arts";
+import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
 import ContactUs from "./components/ContactUs/ContactUs";
 import styles from "./page.module.css";
@@ -10,8 +11,8 @@ function App() {
       <div>START</div>
       {/* <NoSSRHero />
       <NoSSRAbout />
-      <NoSSRMindMap />
-      <NoSSRFAQ />*/}
+      <NoSSRMindMap />*/}
+      <FAQ />
       <Arts />
       <ContactUs />
       <Footer />
