@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import classNames from "classnames";
 import styles from "./styles.module.css";
@@ -22,15 +21,21 @@ const MindMap = () => {
         MIND MAP
       </div>
 
-      {isMobile && (
-        <CardMindMap
-          key={nanoid()}
-          title={dataCards[currentCard].title}
-          info={dataCards[currentCard].info}
-          isActive={dataCards[currentCard].isActive}
-        />
-      )}
-      {!isMobile && (
+      {isMobile ? (
+        <>
+          <CardMindMap
+            key={nanoid()}
+            title={dataCards[currentCard].title}
+            info={dataCards[currentCard].info}
+            isActive={dataCards[currentCard].isActive}
+          />
+          <BlockButtons
+            current={currentCard}
+            setCurrent={setCurrentCard}
+            endImage={dataCards.length - 1}
+          />
+        </>
+      ) : (
         <div className={styles.mediaQuery}>
           {dataCards.map(({ title, info, isActive }) => (
             <CardMindMap
@@ -41,14 +46,6 @@ const MindMap = () => {
             />
           ))}
         </div>
-      )}
-
-      {isMobile && (
-        <BlockButtons
-          current={currentCard}
-          setCurrent={setCurrentCard}
-          endImage={dataCards.length - 1}
-        />
       )}
     </section>
   );
