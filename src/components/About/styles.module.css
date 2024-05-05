@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 72px 0 64px;
+
+  color: var(--color-white);
+}
+.title {
+  padding-bottom: 16px;
+  max-width: 216px;
+
+  font-family: Right Grotesk;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 40px;
+  text-align: left;
+}
+.titleSpan {
+  color: var(--color-red);
+}
+.infoFirst {
+  padding-bottom: 36px;
+  font-family: Messina Sans Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: right;
+}
+.iconWrapper {
+  position: relative;
+  margin-bottom: 16px;
+  text-align: left;
+  width: 24px;
+  height: 24px;
+}
+.infoTwo {
+  padding-bottom: 40px;
+  font-family: Messina Sans Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .container {
+    display: block;
+    position: relative;
+
+    padding: 80px 88px 0 88px;
+  }
+  .title {
+    max-width: 269px;
+    padding-bottom: 68px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .infoFirst {
+    width: 270px;
+    position: absolute;
+    top: 91px;
+    right: 88px;
+  }
+  .iconWrapper {
+    margin-left: 122px;
+    margin-bottom: 16px;
+  }
+  .infoTwo {
+    width: 269px;
+    padding-bottom: 36px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+  }
+  .imageAbout {
+    position: absolute;
+    bottom: 0;
+    right: 88px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    display: block;
+    position: relative;
+    padding: 120px 204px 0 204px;
+  }
+  .title {
+    max-width: 538px;
+    padding-bottom: 56px;
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 120px;
+    text-align: left;
+  }
+  .infoFirst {
+    width: 409px;
+    position: absolute;
+    top: 144px;
+    right: 204px;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .iconWrapper {
+    margin-left: 190px;
+    padding-bottom: 36px;
+    width: 36px;
+    height: 36px;
+  }
+  .infoTwo {
+    width: 417px;
+    padding-bottom: 40px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .imageAbout {
+    position: absolute;
+    bottom: 0;
+    right: 204px;
+  }
+}

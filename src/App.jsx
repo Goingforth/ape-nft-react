@@ -1,4 +1,5 @@
 import Arts from "./components/Arts/Arts";
+import About from "./components/About/About";
 import MindMap from "./components/MIndMap/MindMap";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
@@ -9,9 +10,8 @@ import "./fonts/fonts.css";
 function App() {
   return (
     <main className={styles.container}>
-      <div>START</div>
-      {/* <NoSSRHero />
-      <NoSSRAbout />*/}
+      {/* <NoSSRHero />*/}
+      <About />
       <MindMap />
       <FAQ />
       <Arts />
