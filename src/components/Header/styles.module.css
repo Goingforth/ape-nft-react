@@ -2,9 +2,11 @@
   position: fixed;
   z-index: 50;
   top: 54px;
-  width: 91%;
+  width: 100%;
 
   padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   left: 50%;
   transform: translate(-50%);
 
