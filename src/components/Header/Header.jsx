@@ -1,23 +1,30 @@
-"use client";
 import React from "react";
 import classNames from "classnames";
-import Link from "next/link";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
-import { useState } from "react";
-// import { useResize } from "../Hooks/use-resize";
-import useWindowSize from "@rooks/use-window-size";
+import { useState, useEffect } from "react";
+import { useResize } from "../Hooks/use-resize";
+
 import styles from "./styles.module.css";
 
 import { logo } from "../../image/logo/logo.jsx";
 
 const Header = () => {
   const [menuOn, setMenuOn] = useState(false);
-  // const { isMobile } = useResize();
-   const { innerWidth } = useWindowSize();
-   const isMobile = innerWidth < 768;
-   const isTablet = innerWidth >= 768 && innerWidth < 1440;
-   const isDesktop = innerWidth >= 1440;
+  const [scroll, setScroll] = useState(0);
+  const { isMobile } = useResize();
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY);
+    };
+
+    isMobile && window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMobile]);
+
   return (
     <div
       id='#header'
@@ -27,11 +34,31 @@ const Header = () => {
           : styles.container
       }
     >
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <Link className={styles.logo} href='/'>
-          {logo}
-        </Link>
-        <BurgerMenu menuOn={menuOn} setMenuOn={setMenuOn} isMobile={isMobile} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        {scroll === 0 || menuOn ? (
+          <div
+            className={styles.logo}
+            onClick={() => {
+              location.href = "/";
+            }}
+          >
+            {logo}
+          </div>
+        ) : (
+          <div className={styles.logo}></div>
+        )}
+
+        <BurgerMenu
+          menuOn={menuOn}
+          setMenuOn={setMenuOn}
+          isMobile={isMobile}
+          scroll={scroll}
+        />
       </div>
       {menuOn && isMobile && (
         <div className={styles.copyRight}>

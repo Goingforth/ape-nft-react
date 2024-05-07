@@ -1,0 +1,25 @@
+.mobileNavMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.navMobile {
+  width: 121px;
+  height: 40px;
+  font-family: Messina Sans Mono;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+}
+.navMobile:hover {
+  color: var(--color-red);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navMenu {
+  display: flex;
+  overflow: hidden;
+  border-radius: 12px 0 0 12px;
+}

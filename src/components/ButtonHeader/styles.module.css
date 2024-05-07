@@ -1,0 +1,51 @@
+.border {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.buttonHeader {
+  width: 48px;
+  height: 48px;
+  border: none;
+  color: currentColor;
+
+  background-color: var(--color-grey);
+
+  font-family: Messina Sans Mono;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hoverClassColor:hover {
+  color: var(--hover-color) !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapper {
+  margin: auto;
+  width: 16px;
+  height: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 24px;
+    height: 24px;
+  }
+  .border {
+    overflow: hidden;
+    border-radius: 12px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .buttonHeader {
+    width: 80px;
+    height: 80px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

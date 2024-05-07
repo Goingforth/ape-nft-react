@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.navMenuMobile {
+  margin-top: 232px;
+  margin-right: 55px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    border-radius: 12px;
+  }
+  .borderMenuOn {
+    border-radius: 0 12px 12px 0;
+  }
+}

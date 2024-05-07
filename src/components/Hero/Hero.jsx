@@ -1,19 +1,13 @@
 import React from "react";
-
-// import Image from "next/image";
-
 import styles from "./styles.module.css";
 import { heroMobile, heroTablet, heroDesktop } from "../../image/hero/index";
 import { useResize } from "../Hooks/use-resize";
-
-//import Header from "../Header/Header";
 
 const Hero = () => {
   const { isMobile, isTablet, isDesktop } = useResize();
 
   return (
     <section className={styles.container}>
-      {/* <Header /> */}
       <div className={styles.heroText1}>diD yOu seE iT ?</div>
       <div className={styles.heroTitle}>
         <span>YACHT</span> <span>APES</span>
