@@ -8,7 +8,17 @@ import NavMenu from "../NavMenu/NavMenu";
 const BurgerMenu = ({ menuOn, setMenuOn, isMobile, scroll }) => {
   return (
     <>
-      <div style={{ display: "flex" }}>
+      <div
+        // style={{
+        //   display: "flex",
+        //   width: "65%",
+        //   justifyContent: "space-between",
+        // }}
+        style={{
+          display: "flex",
+        }}
+        className={isMobile && menuOn ? styles.strechy : ""}
+      >
         {menuOn && (
           <div className={isMobile ? styles.navMenuMobile : ""}>
             <NavMenu isMobile={isMobile} setMenuOn={setMenuOn} />

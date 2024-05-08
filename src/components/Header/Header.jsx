@@ -40,7 +40,7 @@ const Header = () => {
           justifyContent: "space-between",
         }}
       >
-        {scroll === 0 || menuOn ? (
+        {scroll === 0 || menuOn || !isMobile ? (
           <div
             className={styles.logo}
             onClick={() => {
