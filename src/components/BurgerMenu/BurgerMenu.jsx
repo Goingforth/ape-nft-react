@@ -9,11 +9,6 @@ const BurgerMenu = ({ menuOn, setMenuOn, isMobile, scroll }) => {
   return (
     <>
       <div
-        // style={{
-        //   display: "flex",
-        //   width: "65%",
-        //   justifyContent: "space-between",
-        // }}
         style={{
           display: "flex",
         }}

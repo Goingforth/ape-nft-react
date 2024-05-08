@@ -14,7 +14,7 @@ const About = () => {
   const { isMobile, isDesktop } = useResize();
 
   return (
-    <section>
+    <>
       <section id='about' className={styles.container}>
         {isMobile ? (
           <>
@@ -59,7 +59,7 @@ const About = () => {
         />
       </section>
       <Ticker />
-    </section>
+    </>
   );
 };
 
