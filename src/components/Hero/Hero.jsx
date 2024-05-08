@@ -13,11 +13,13 @@ const Hero = () => {
         <span>YACHT</span> <span>APES</span>
       </div>
       <div className={styles.heroText2}>Apes aRe eveRywhere</div>
-      <img
-        src={isMobile ? heroMobile : isTablet ? heroTablet : heroDesktop}
-        alt='heroImage'
-        className={styles.imageHero}
-      />
+      <div className={styles.imgWrapper}>
+        <img
+          src={isMobile ? heroMobile : isTablet ? heroTablet : heroDesktop}
+          alt='heroImage'
+          className={styles.imageHero}
+        />
+      </div>
       <button
         type='button'
         onClick={() => (location.href = "#mint")}
