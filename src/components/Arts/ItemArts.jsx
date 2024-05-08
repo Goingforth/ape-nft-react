@@ -26,6 +26,7 @@ const ItemArts = ({ src }) => {
       <div className={styles.itemArts}>
         <LazyLoadImage
           className={styles.imgArts}
+          loading='lazy'
           alt='Picture of the NFT'
           src={src}
           effect='blur'
