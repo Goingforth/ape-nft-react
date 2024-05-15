@@ -61,7 +61,6 @@ const Arts = () => {
       <BlockButtons
         current={currentImage}
         setCurrent={setCurrentImage}
-        // endImage={dataArts.length - (isTablet ? 2 : isDesktop ? 4 : 1)}
         endImage={endImage}
       />
     </section>
