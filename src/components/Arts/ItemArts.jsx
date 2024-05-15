@@ -39,10 +39,16 @@ const ItemArts = ({ src, setCurrentImage, currentImage, endImage }) => {
       <div
         className={styles.itemArts}
         draggable='true'
-        onDragStart={({ clientX }) => {
+        // onDragStart={({ clientX }) => {
+        //   setDragStart(clientX);
+        // }}
+        // onDragEnd={({ clientX }) => {
+        //   setDragEnd(clientX);
+        // }}
+        onTouchStart={({ clientX }) => {
           setDragStart(clientX);
         }}
-        onDragEnd={({ clientX }) => {
+        onTouchEnd={({ clientX }) => {
           setDragEnd(clientX);
         }}
       >
