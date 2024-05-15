@@ -5,8 +5,11 @@ import styles from "./styles.module.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const ItemArts = ({ src }) => {
+const ItemArts = ({ src, setCurrentImage, currentImage, endImage }) => {
   const [loadedSrc, setLoadedSrc] = useState(null);
+  const [dragStart, setDragStart] = useState(0);
+  const [dragEnd, setDragEnd] = useState(0);
+
   useEffect(() => {
     setLoadedSrc(null);
     if (src) {
@@ -21,9 +24,28 @@ const ItemArts = ({ src }) => {
       };
     }
   }, [src]);
+  //
+  useEffect(() => {
+    if (dragEnd > dragStart && currentImage > 0) {
+      setCurrentImage(currentImage - 1);
+    } else if (dragEnd < dragStart && currentImage < endImage) {
+      setCurrentImage(currentImage + 1);
+    }
+  }, [dragEnd]);
+  //
+
   if (loadedSrc === src) {
     return (
-      <div className={styles.itemArts}>
+      <div
+        className={styles.itemArts}
+        draggable='true'
+        onDragStart={({ clientX }) => {
+          setDragStart(clientX);
+        }}
+        onDragEnd={({ clientX }) => {
+          setDragEnd(clientX);
+        }}
+      >
         <LazyLoadImage
           className={styles.imgArts}
           loading='lazy'
