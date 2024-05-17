@@ -14,6 +14,13 @@ const Arts = () => {
 
   const { isTablet, isDesktop } = useResize();
   const endImage = dataArts.length - (isTablet ? 2 : isDesktop ? 4 : 1);
+
+  const props = {
+    currentImage: currentImage,
+    setCurrentImage: setCurrentImage,
+    endImage: endImage,
+  };
+
   return (
     <section id='arts' className={styles.container}>
       <div
@@ -23,20 +30,12 @@ const Arts = () => {
         COLLECTION
       </div>
       <div className={styles.mediaQuery}>
-        <ItemArts
-          key={nanoid()}
-          src={dataArts[currentImage]}
-          currentImage={currentImage}
-          setCurrentImage={setCurrentImage}
-          endImage={endImage}
-        />
+        <ItemArts key={nanoid()} src={dataArts[currentImage]} {...props} />
         {(isTablet || isDesktop) && (
           <ItemArts
             key={nanoid()}
             src={dataArts[currentImage + 1]}
-            currentImage={currentImage}
-            setCurrentImage={setCurrentImage}
-            endImage={endImage}
+            {...props}
           />
         )}
         {isDesktop && (
@@ -44,25 +43,17 @@ const Arts = () => {
             <ItemArts
               key={nanoid()}
               src={dataArts[currentImage + 2]}
-              currentImage={currentImage}
-              setCurrentImage={setCurrentImage}
-              endImage={endImage}
+              {...props}
             />
             <ItemArts
               key={nanoid()}
               src={dataArts[currentImage + 3]}
-              currentImage={currentImage}
-              setCurrentImage={setCurrentImage}
-              endImage={endImage}
+              {...props}
             />
           </>
         )}
       </div>
-      <BlockButtons
-        current={currentImage}
-        setCurrent={setCurrentImage}
-        endImage={endImage}
-      />
+      <BlockButtons {...props} />
     </section>
   );
 };

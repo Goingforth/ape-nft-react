@@ -1,23 +1,24 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const BlockButtons = ({ current, setCurrent, endImage }) => {
+const BlockButtons = (props) => {
+  const { setCurrentImage, currentImage, endImage } = props;
   return (
     <div className={styles.blockButtoms}>
       <button
         className={styles.buttomArts}
-        disabled={current === 0}
+        disabled={currentImage === 0}
         onClick={() => {
-          if (current > 0) setCurrent(current - 1);
+          if (currentImage > 0) setCurrentImage(currentImage - 1);
         }}
       >
         Prev
       </button>
       <button
         className={styles.buttomArts}
-        disabled={current === endImage}
+        disabled={currentImage === endImage}
         onClick={() => {
-          current < endImage && setCurrent(current + 1);
+          currentImage < endImage && setCurrentImage(currentImage + 1);
         }}
       >
         Next

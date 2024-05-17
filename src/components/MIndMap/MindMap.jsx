@@ -30,8 +30,8 @@ const MindMap = () => {
             isActive={dataCards[currentCard].isActive}
           />
           <BlockButtons
-            current={currentCard}
-            setCurrent={setCurrentCard}
+            currentImage={currentCard}
+            setCurrentImage={setCurrentCard}
             endImage={dataCards.length - 1}
           />
         </>

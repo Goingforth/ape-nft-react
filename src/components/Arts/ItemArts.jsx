@@ -5,10 +5,11 @@ import styles from "./styles.module.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const ItemArts = ({ src, setCurrentImage, currentImage, endImage }) => {
+const ItemArts = (props) => {
   const [loadedSrc, setLoadedSrc] = useState(null);
   const [dragStart, setDragStart] = useState(0);
   const [dragEnd, setDragEnd] = useState(0);
+  const { src, setCurrentImage, currentImage, endImage } = props;
 
   useEffect(() => {
     setLoadedSrc(null);
