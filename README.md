@@ -14,7 +14,7 @@ https://docs.google.com/document/d/1U3BNnY61mQnyvSC_dphAVgYDP1omhO4g/edit?pli=1
 
 ### Build
 
-[Front : ](https://ape-nft-react.netlify.app/)
+- [Front](https://ape-nft-react.netlify.app/)
 
 ### Technologies
 
