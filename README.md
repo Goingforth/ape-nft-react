@@ -39,8 +39,14 @@ https://docs.google.com/document/d/1U3BNnY61mQnyvSC_dphAVgYDP1omhO4g/edit?pli=1
 - Each menu item should be clickable and when clicked, the mobile menu should close and a smooth scroll to the corresponding section on the page should occur.
 - The height of the burger menu on a mobile phone is full screen and has a black background.
 - On a tablet, the burger menu is transparent, loses its background and looks similar to the desktop version.
-- (As an additional task) You can add an animation of the appearance and disappearance of the mobile menu. 3. Hero
-- When clicking on Meet Apes, a smooth scroll occurs to the Mint section. 4. About
+- (As an additional task) You can add an animation of the appearance and disappearance of the mobile menu.
+
+  3. Hero
+
+- When clicking on Meet Apes, a smooth scroll occurs to the Mint section.
+
+  4. About
+
 - The section contains a title, two blocks of text, an image and a banner.
 - (As an additional task) The banner (the red line with the inscriptions) should contain a “moving line” animation
 
