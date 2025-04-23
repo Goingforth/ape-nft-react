@@ -12,7 +12,9 @@ Implement Ape NFT landing page according to the technical specifications.
 
 https://docs.google.com/document/d/1U3BNnY61mQnyvSC_dphAVgYDP1omhO4g/edit?pli=1
 
-[### Build](https://ape-nft-react.netlify.app/)
+### Build
+
+[Front : ](https://ape-nft-react.netlify.app/)
 
 ### Technologies
 
